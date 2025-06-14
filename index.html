@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Rafael Yap, Front-End Developer and UI Designer">
+  <title>Rafael Yap | Front-End Developer Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Dark Mode Toggle Button -->
+  <button id="darkModeToggle" aria-label="Toggle Dark Mode">
+    <span class="dark-icon">🌙</span>
+    <span class="light-icon">☀️</span>
+  </button>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Rafael Yap</a>
+      <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="hero">
+    <div class="header-content">
+      <h1>👋 Hi, I'm <span class="highlight">Rafael Yap</span></h1>
+      <p class="subtitle">Front-End Developer | UI Designer | Tech Enthusiast</p>
+      <a href="#contact" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </header>
+ 
+  <main class="container">
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="profile-image-container">
+          <img src="me.jpg" alt="Rafael Yap" class="profile-pic" loading="lazy">
+          <div class="image-border"></div>
+        </div>
+        <div class="about-text">
+          <p class="intro">
+            Hi! I'm Rafael Yap, a 2nd Year student in NU MOA based in the Philippines with a passion for crafting clean, 
+            user-friendly web experiences. I specialize in turning creative ideas into functional and responsive websites.
+          </p>
+          <p>
+            Currently, I'm focused on expanding my skills, learning new technologies, and building projects that showcase 
+            my growth as a developer. I believe in continuous learning and staying updated with the latest web trends.
+          </p>
+
+          <h3 class="hobbies-title">Things I Enjoy</h3>
+          <ul class="hobbies-list">
+            <li><i class="fas fa-gamepad"></i> Playing video games</li>
+            <li><i class="fas fa-headphones"></i> Listening to music</li>
+            <li><i class="fas fa-camera"></i> Photography</li>
+            <li><i class="fas fa-basketball-ball"></i> Basketball</li>
+            <li><i class="fas fa-film"></i> Watching movies</li>
+            <li><i class="fas fa-puzzle-piece"></i> Solving puzzles</li>
+            <li><i class="fas fa-pencil-alt"></i> Sketching</li>
+            <li><i class="fas fa-laptop-code"></i> Exploring tech trends</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+      <h2 class="section-title">My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="fab fa-html5 skill-icon"></i>
+          <h3>HTML & CSS</h3>
+          <p>Semantic markup and modern styling techniques</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-paint-brush skill-icon"></i>
+          <h3>UI/UX Design</h3>
+          <p>Creating intuitive and visually appealing interfaces</p>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-js skill-icon"></i>
+          <h3>JavaScript</h3>
+          <p>Building interactive web experiences</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-mobile-alt skill-icon"></i>
+          <h3>Responsive Design</h3>
+          <p>Optimized for all device sizes</p>
+        </div>
+        <div class="skill-card">
+          <i class="fab fa-git-alt skill-icon"></i>
+          <h3>Git & GitHub</h3>
+          <p>Version control and collaboration</p>
+        </div>
+        <div class="skill-card">
+          <i class="fas fa-lightbulb skill-icon"></i>
+          <h3>Problem Solving</h3>
+          <p>Creative solutions to technical challenges</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3>About Me Page</h3>
+            <p>A personal profile page showcasing HTML and CSS fundamentals.</p>
+            <div class="project-links">
+              <a href="https://pogiko1345.github.io/About-Me/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Project</a>
+            </div>
+          </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-sign-in-alt"></i>
+          </div>
+          <h3>Login Form</h3>
+          <p>A responsive login layout demonstrating form design principles.</p>
+          <div class="project-links">
+            <a href="https://pogiko1345.github.io/Login/" class="btn btn-secondary" target="_blank">View Project</a>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-icon">
+            <i class="fas fa-file-signature"></i>
+          </div>
+          <h3>Registration Form</h3>
+          <p>A form-based project focusing on HTML form validation and design.</p>
+          <div class="project-links">
+            <a href="https://pogiko1345.github.io/Studentreg/" class="btn btn-secondary" target="_blank">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-intro">I'd love to connect! Feel free to reach out using any of the options below:</p>
+      <div class="contact-info">
+        <div class="contact-method">
+          <i class="fas fa-envelope contact-icon"></i>
+          <a href="mailto:rafaelseanyap123@gmail.com">rafaelseanyap123@gmail.com</a>
+        </div>
+        <div class="contact-method">
+          <i class="fas fa-phone contact-icon"></i>
+          <a href="tel:+639617180275">+63 961 718 0275</a>
+        </div>
+        <div class="contact-method">
+          <i class="fab fa-facebook contact-icon"></i>
+          <a href="https://www.facebook.com/yappp.29/" target="_blank">facebook.com/yappp.29</a>
+        </div>
+      </div>
+      <form class="contact-form">
+        <div class="form-group">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© <span id="year"></span> Rafael Yap • All Rights Reserved</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com/yappp.29/" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://github.com/pogiko1345" target="_blank" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/rafaelyap29/" target="_blank" aria-label="Instagram" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
