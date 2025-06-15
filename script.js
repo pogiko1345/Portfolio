@@ -3,23 +3,18 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('year').textContent = new Date().getFullYear();
 
   // Dark mode toggle
-  const darkModeToggle = document.getElementById('darkModeToggle');
-  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-  
-  // Check for saved user preference or use system preference
   const currentTheme = localStorage.getItem('theme') || 
-                      (prefersDarkScheme.matches ? 'dark' : 'light');
-  
-  if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-  }
+                    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
-  // Toggle dark mode
-  darkModeToggle.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-    localStorage.setItem('theme', theme);
-  });
+if (currentTheme === 'dark') {
+  document.body.classList.add('dark-mode');
+}
+
+document.getElementById('darkModeToggle').addEventListener('click', function() {
+  document.body.classList.toggle('dark-mode');
+  const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+  localStorage.setItem('theme', theme);
+});
 
   // Mobile menu toggle
   const mobileMenuBtn = document.querySelector('.mobile-menu-toggle');
@@ -57,17 +52,44 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Form submission
-  const contactForm = document.querySelector('.contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Here you would typically send the form data to a server
-      // For now, we'll just show an alert
-      alert('Thank you for your message! I will get back to you soon.');
-      this.reset();
-    });
+    const contactForm = document.querySelector('.contact-form');
+      if (contactForm) {
+  // Add this alert function first
+    function showAlert(message, type) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `alert alert-${type}`;
+    alertDiv.textContent = message;
+    contactForm.prepend(alertDiv);
+    
+    setTimeout(() => {
+      alertDiv.style.opacity = '0';
+      setTimeout(() => alertDiv.remove(), 300);
+    }, 3000);
   }
+
+  // Then add the form submission handler
+  contactForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const submitBtn = this.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+    
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1500));
+      
+      // Success
+      this.reset();
+      showAlert('Message sent successfully!', 'success');
+    } catch (error) {
+      showAlert('Failed to send message. Please try again.', 'error');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Message';
+    }
+  });
+}
 
   // Add animation class when elements come into view
   const animateOnScroll = function() {
